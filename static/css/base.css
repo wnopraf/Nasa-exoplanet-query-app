@@ -1,0 +1,12 @@
+.button {
+  @apply .px-2 .py-1;
+}
+:root {
+  font-size: 16px;
+}
+table th {
+  @apply .text-left;
+}
+table td {
+  @apply .py-3;
+}
