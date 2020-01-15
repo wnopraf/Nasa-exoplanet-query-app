@@ -19,7 +19,7 @@ export default function main() {
     },
     isNotFiltered: false
   })
-  const [cleared, setCleared] = useState(false)
+  const [cleared, setCleared] = useState(true)
 
   let itemsPerPage = 100
   let totalPages = Math.round(planets.length / 100)
