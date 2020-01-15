@@ -3,12 +3,12 @@ import React from "react"
 export default ({ stateLabel, infoLabel, data, filters, setFilters }) => {
   const { formFilters } = filters
   return (
-    <div className="w-4/5 py-3">
+    <div className="py-3 sm:w-1/2 sm:px-2 lg:w-1/4">
       <label className="capitalize pl-2" htmlFor={stateLabel}>
         {infoLabel}
       </label>
       <select
-        className=" block w-full mt-2"
+        className=" block w-full  mt-2"
         onChange={e => {
           console.log("selected", e.target.value)
           setFilters({

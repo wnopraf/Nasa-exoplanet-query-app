@@ -57,7 +57,7 @@ export default function main() {
 
   return (
     <Layout>
-      <div className="selectors flex flex-col  justify-center items-center">
+      <div className="selectors sm:flex  justify-center items-center flex-wrap">
         <Selector
           stateLabel="pl_discmethod"
           filters={filters}
