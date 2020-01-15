@@ -15,12 +15,18 @@ const DataTable = ({
   }
   return (
     (filteredData.length && (
-      <table className=" table-fixed">
+      <table className=" table-fixed w-full table-min-width overflow-y-scroll">
         <thead>
           <tr>
             {Object.keys(formFilters).map((name, i) => {
               return (
-                <th className=" w-1/4" key={name}>
+                <th
+                  className={
+                    ((i === 0 || i === 3) && "w-1/6") ||
+                    ((i === 1 || i === 2) && "w-2/6")
+                  }
+                  key={name}
+                >
                   {name}
                 </th>
               )

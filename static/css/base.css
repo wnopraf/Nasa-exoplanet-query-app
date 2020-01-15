@@ -10,3 +10,6 @@ table th {
 table td {
   @apply .py-3;
 }
+.table-min-width {
+  min-width: 550px;
+}
