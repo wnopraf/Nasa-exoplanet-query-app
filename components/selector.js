@@ -1,7 +1,7 @@
 import React from "react"
 
 export default ({ stateLabel, infoLabel, data, filters, setFilters }) => {
-  const { formFilters } = filters
+  const { formFilters, isNotFiltered } = filters
   return (
     <div className="py-3 sm:w-1/2 sm:px-2 lg:w-1/4">
       <label className="capitalize pl-2" htmlFor={stateLabel}>
@@ -16,7 +16,7 @@ export default ({ stateLabel, infoLabel, data, filters, setFilters }) => {
               ...formFilters,
               [stateLabel]: e.target.value
             },
-            isNotFiltered: false
+            isNotFiltered
           })
         }}
         id={stateLabel}

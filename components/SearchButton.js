@@ -1,8 +1,10 @@
 import { search } from "../lib/filter"
 
 export default ({ filters, setFilters, data, setFilteredData, setCleared }) => {
+  const { formFilters } = filters
   const doSearch = () => {
     setCleared(false)
+    setFilters({ formFilters, isNotFiltered: false })
     search(filters, setFilters, setFilteredData, data)
   }
   return (
