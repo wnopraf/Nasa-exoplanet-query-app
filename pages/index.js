@@ -3,10 +3,9 @@ import Selector from "../components/selector"
 import SearchButton from "../components/SearchButton"
 import ClearButton from "../components/ClearButton"
 import planets from "../planets_2020.json"
-import { search } from "../lib/filter"
+
 import { DataTable } from "../components/DataTable"
 
-import { isNotSelected } from "../lib/utils"
 import Layout from "../components/Layout"
 
 export default function main() {
@@ -21,39 +20,8 @@ export default function main() {
   })
   const [cleared, setCleared] = useState(true)
 
-  let itemsPerPage = 100
-  let totalPages = Math.round(planets.length / 100)
-  let actualPage
   const [filteredData, setFilteredData] = useState([])
   console.log(filters, "filters state")
-  /*  useEffect(() => {
-    console.log("second effect")
-    window.addEventListener("scroll", onScroll)
-    function onScroll(e) {
-      const scrollLimit = e.target.scrollingElement.scrollHeight
-      if (window.scrollY + window.innerHeight === scrollLimit) {
-        if (actualPage < totalPages) {
-          console.log("fkeys", filters)
-          const newData = [
-            ...filteredData,
-            ...planets.slice(itemsPerPage, itemsPerPage * actualPage)
-          ]
-          if (isNotFiltered(filters.formFilters)) {
-            console.log("filtered data")
-            search(filters, setFilteredData, newData)
-          } else {
-            setFilteredData(newData)
-          }
-
-          actualPage += 1
-        }
-      }
-
-      console.log("page", actualPage)
-    }
-    actualPage = 1
-    return () => window.removeEventListener("scroll", onScroll)
-  }, [filters]) */
 
   return (
     <Layout>
