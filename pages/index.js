@@ -72,6 +72,7 @@ export default function main() {
 
       <DataTable
         filteredData={filteredData}
+        setFilteredData={setFilteredData}
         filters={filters}
         cleared={cleared}
       />

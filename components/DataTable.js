@@ -1,8 +1,21 @@
 const DataTable = ({
   filteredData,
+  setFilteredData,
   filters: { formFilters, isNotFiltered },
   cleared
 }) => {
+  const sort = (name, dir) => {
+    filteredData.sort((a, b) => {
+      switch (dir) {
+        case "down":
+          return a[name] > b[name] ? -1 : a[name] === b[name] ? 0 : 1
+        case "up":
+          return a[name] > b[name] ? 1 : a[name] === b[name] ? 0 : -1
+      }
+    })
+
+    setFilteredData([...filteredData])
+  }
   if (cleared) return null
   if (isNotFiltered) {
     return (
@@ -28,6 +41,18 @@ const DataTable = ({
                   key={name}
                 >
                   {name}
+                  <span
+                    onClick={e => sort(name, "up")}
+                    className=" cursor-pointer"
+                  >
+                    up
+                  </span>
+                  <span
+                    onClick={e => sort(name, "down")}
+                    className=" cursor-pointer"
+                  >
+                    down
+                  </span>
                 </th>
               )
             })}
