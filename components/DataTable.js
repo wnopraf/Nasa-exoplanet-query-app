@@ -1,3 +1,5 @@
+import { AiFillCaretDown, AiFillCaretUp } from "react-icons/ai"
+
 const DataTable = ({
   filteredData,
   setFilteredData,
@@ -43,15 +45,15 @@ const DataTable = ({
                   {name}
                   <span
                     onClick={e => sort(name, "up")}
-                    className=" cursor-pointer"
+                    className="caret-icon cursor-pointer inline-block align-text-top"
                   >
-                    up
+                    <AiFillCaretUp />
                   </span>
                   <span
                     onClick={e => sort(name, "down")}
-                    className=" cursor-pointer"
+                    className="caret-icon cursor-pointer inline-block align-text-top "
                   >
-                    down
+                    <AiFillCaretDown />
                   </span>
                 </th>
               )
