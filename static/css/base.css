@@ -4,12 +4,10 @@
 :root {
   font-size: 16px;
 }
-table th {
-  @apply .text-left;
-}
+
 table td {
   @apply .py-3;
 }
 .table-min-width {
-  min-width: 550px;
+  min-width: 700px;
 }

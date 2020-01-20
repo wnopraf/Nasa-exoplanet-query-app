@@ -30,7 +30,7 @@ const DataTable = ({
   }
   return (
     (filteredData.length && (
-      <table className=" table-fixed w-full table-min-width overflow-y-scroll">
+      <table className=" table-fixed text-center w-full table-min-width overflow-y-scroll">
         <thead>
           <tr>
             {Object.keys(formFilters).map((name, i) => {
@@ -43,17 +43,19 @@ const DataTable = ({
                   key={name}
                 >
                   {name}
-                  <span
-                    onClick={e => sort(name, "up")}
-                    className="caret-icon cursor-pointer inline-block align-text-top"
-                  >
-                    <AiFillCaretUp />
-                  </span>
-                  <span
-                    onClick={e => sort(name, "down")}
-                    className="caret-icon cursor-pointer inline-block align-text-top "
-                  >
-                    <AiFillCaretDown />
+                  <span className="caret-block block">
+                    <span
+                      onClick={e => sort(name, "up")}
+                      className="caret-icon cursor-pointer inline-block mr-1"
+                    >
+                      <AiFillCaretUp />
+                    </span>
+                    <span
+                      onClick={e => sort(name, "down")}
+                      className="caret-icon cursor-pointer inline-block "
+                    >
+                      <AiFillCaretDown />
+                    </span>
                   </span>
                 </th>
               )
