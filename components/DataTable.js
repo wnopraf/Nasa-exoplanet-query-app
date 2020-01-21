@@ -1,5 +1,6 @@
 import { AiFillCaretDown, AiFillCaretUp } from "react-icons/ai"
-
+import { findPlanetName } from "../lib/utils"
+import data from "../planets_2020.json"
 const DataTable = ({
   filteredData,
   setFilteredData,
@@ -68,6 +69,18 @@ const DataTable = ({
             return (
               <tr key={i}>
                 {Object.keys(formFilters).map((name, i) => {
+                  if (name === "pl_hostname") {
+                    const planetName = findPlanetName(data, planet[name])
+                    let url = `https://exoplanetarchive.ipac.caltech.edu/cgi-bin/DisplayOverview/nph-DisplayOverview?objname=${planetName}&type=CONFIRMED_PLANET`
+                    url = url.replace(/\+/g, "%2B").replace(/\s/g, "+")
+                    return (
+                      <td key={i}>
+                        <a href={encodeURI(url)} target="_blank">
+                          {planet[name]}
+                        </a>
+                      </td>
+                    )
+                  }
                   return <td key={i}>{planet[name]}</td>
                 })}
               </tr>
