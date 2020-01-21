@@ -75,7 +75,7 @@ const DataTable = ({
                     url = url.replace(/\+/g, "%2B").replace(/\s/g, "+")
                     return (
                       <td key={i}>
-                        <a href={encodeURI(url)} target="_blank">
+                        <a href={url} target="_blank">
                           {planet[name]}
                         </a>
                       </td>
