@@ -25,6 +25,11 @@ export default function main() {
 
   return (
     <Layout>
+      <header className="text-center py-2 mb-3">
+        <h1 className=" text-3xl sm:text-5xl capitalize">
+          nasa exoplanet query archive app
+        </h1>
+      </header>
       <div className="selectors sm:flex  justify-center items-center flex-wrap">
         <Selector
           stateLabel="pl_discmethod"
