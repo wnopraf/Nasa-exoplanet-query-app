@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import Selector from "../components/selector"
 import SearchButton from "../components/SearchButton"
 import ClearButton from "../components/ClearButton"
