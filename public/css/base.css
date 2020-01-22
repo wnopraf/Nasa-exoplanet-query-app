@@ -11,3 +11,17 @@ table td {
 .table-min-width {
   min-width: 700px;
 }
+
+select {
+  appearance: none;
+}
+.select-shadow {
+  box-shadow: rgba(0, 0, 0, 0.28) 0px 1px 0px 1px;
+}
+.select-gradient {
+  background-image: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+}
+.position-right-middle {
+  right: 1rem;
+  top: 60%;
+}
