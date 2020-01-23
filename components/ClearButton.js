@@ -15,7 +15,10 @@ export default ({ setCleared, setFilters }) => {
   }
 
   return (
-    <button className="button bg-gray-300 ml-1" onClick={clear}>
+    <button
+      className="button button-texture focus:outline-none ml-1"
+      onClick={clear}
+    >
       Clear
     </button>
   )
