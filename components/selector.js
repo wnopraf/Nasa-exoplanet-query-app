@@ -1,5 +1,5 @@
 import React from "react"
-import { FaCaretDown } from "react-icons/fa"
+
 export default ({ stateLabel, infoLabel, data, filters, setFilters }) => {
   const { formFilters, isNotFiltered } = filters
   return (
@@ -8,7 +8,7 @@ export default ({ stateLabel, infoLabel, data, filters, setFilters }) => {
         {infoLabel}
       </label>
       <select
-        className=" block w-full  mt-2 py-1 pl-3 border border-gray-500 select-shadow cursor-pointer bg-gray-200 select-gradient focus:outline-none"
+        className=" block w-full  mt-2 py-1 pl-3 border border-gray-500  cursor-pointer bg-gray-200  select-bg focus:outline-none"
         onChange={e => {
           console.log("selected", e.target.value)
           setFilters({
@@ -31,9 +31,6 @@ export default ({ stateLabel, infoLabel, data, filters, setFilters }) => {
           )
         })}
       </select>
-      <i className="absolute position-right-middle">
-        <FaCaretDown />
-      </i>
     </div>
   )
 }
