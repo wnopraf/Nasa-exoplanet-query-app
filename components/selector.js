@@ -10,7 +10,6 @@ export default ({ stateLabel, infoLabel, data, filters, setFilters }) => {
       <select
         className=" block w-full  mt-2 py-1 pl-3 border border-gray-500  cursor-pointer bg-gray-200  select-bg focus:outline-none"
         onChange={e => {
-          console.log("selected", e.target.value)
           setFilters({
             formFilters: {
               ...formFilters,

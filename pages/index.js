@@ -21,7 +21,6 @@ export default function main() {
   const [cleared, setCleared] = useState(true)
 
   const [filteredData, setFilteredData] = useState([])
-  console.log(filters, "filters state")
 
   return (
     <Layout>
